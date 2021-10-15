@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import copy
+#video capture here
 cap= cv2.VideoCapture(0)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('a.avi', fourcc, 5.0, (640, 480))
@@ -8,6 +9,7 @@ status,pic=cap.read()
 cv2.imshow('hi',pic)
 cv2.waitKey()
 black=(150,150,150)
+#start loop here
 while True:
     status,photo=cap.read()
     for i in range(photo.shape[0]):
